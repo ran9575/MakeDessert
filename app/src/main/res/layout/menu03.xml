@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCCC0"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- WANT PAGE -"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/nametag"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="이        름 "
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/nametag"
+                android:ems="10"
+                android:hint="홍길동"
+                android:inputType="text"
+                android:layout_weight="4"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/contexttag"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="내        용 "
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_weight="2"/>
+            <EditText
+                android:id="@+id/context"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="원하시는 레시피를 적어주세요."
+                android:inputType="text"
+                android:layout_weight="4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:id="@+id/birthdaytag"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="신청 날짜"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="4">
+                <Button
+                    android:id="@+id/btn_date"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="선택"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:gravity="center"
+        android:layout_marginBottom="40dp">
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보내기"
+            android:textSize="20dp"
+            android:onClick="onSaveClicked"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#ff000000">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="2018 © Copyright by MAKE DESSERT."
+            android:textColor="#ffffffff"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
